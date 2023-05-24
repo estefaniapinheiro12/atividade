@@ -1,71 +1,63 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     margin: 0;
 }
-a{
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s;
-}
-a:hover{
-    opacity: 0.7;
-}
 
-
-nav{
+nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     background: #23232e;
     height: 8vh;
 }
-main{
-    background: url(img.webp)no-repeat 
-    center center;
+
+main {
+    background: url(img.webp)no-repeat center center;
     background-size: cover;
     height: 92vh;
 }
-.nav-list{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.nav-list li{
-    letter-spacing: 3px;
-    margin-left: 32px;
-    list-style:none;
-    position:relative;
-    float:left;
-    
-}
-.nav-list a {
-    font-size: 17px;
+
+a {
     color: #fff;
-    padding: 15px 19px;
     text-decoration: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;   
+    transition: 0.3s;
 }
-.nav-list li:hover> a {
-    color: #fff;
+
+a:hover {
+    opacity: 0.7;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+ul li {
+    list-style: none;
+    color: #484848;
+    font-size: 20px;
+    letter-spacing: 15px;
+    animation: lighting 1.4s linear infinite;
 }
 
 .menu1 {
     display: none;
     cursor: pointer;
-    display: block;
 }
 
-.menu1 div{
+.menu1 div {
     width: 32px;
     height: 2px;
     background: #fff;
     margin: 8px;
 }
-.submenu{
+
+.submenu {
     font-size: 16px;
     padding: 10px;
     color: #23232e;
@@ -75,37 +67,64 @@ main{
     display: none;
     position: absolute;
 }
-.submenu a{
+
+.submenu a {
     font-size: 16px;
     padding: 10px;
-    color: #23232e;
+    color: #fff;
     align-content: end;
 }
+
+.nav-list {
+    list-style: none;
+    display: flex;
+
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 0px;
+    list-style: none;
+    position: relative;
+    float: left;
+}
+
+.nav-list a {
+    font-size: 17px;
+    color: #fff;
+    padding: 15px 19px;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.nav-list li:hover>a {
+    color: #fff;
+}
+
 .nav-list li:hover>.submenu {
     display: flex;
     flex-direction: column;
 }
 
-.nav-list li a:hover{
-    background:#23232e;
-    color:#fff;
-    -moz-box-shadow:0 3px 10px 0 #CCC;
-    -webkit-box-shadow:0 3px 10px 0 #ccc;
-    text-shadow:0px 0px 5px #fff;
+.nav-list li a:hover {
+    background: #23232e;
+    color: #fff;
+    -moz-box-shadow: 0 3px 10px 0 #CCC;
+    -webkit-box-shadow: 0 3px 10px 0 #ccc;
+    text-shadow: 0px 0px 5px #fff;
     -webkit-border-radius: 25px;
-    }
+}
 
-.nav-list li  ul{
-    position:absolute;
-    top:25px;
-    left:0;
-    background-color:#fff;
-    display:none;
-    }
-@media(max-width: 999px){
-   
+.nav-list li ul {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    background-color: #23232e;
+    display: none;
+}
 
-    .nav-list{
+@media(max-width: 999px) {
+    .nav-list {
         position: absolute;
         top: 8vh;
         right: 0;
@@ -116,81 +135,62 @@ main{
         align-items: center;
         justify-content: space-around;
     }
-    
+
+    .nav-list {
+        margin-left: 0;
+    }
+
+    .menu1 {
+        display: block;
+
+    }
 }
 
-ul{
-    margin: 0;
-    padding: 0;
-    display: flex;
+@keyframes lighting {
+    0% {
+        color: #fff;
+        text-shadow: none;
+    }
 
+    90% {
+        color: #fff;
+        text-shadow: none;
+    }
+
+    100% {
+        color: #61058b;
+        text-shadow: 0 0 7px #fff, 0 0 50px #e5e7e9;
+    }
 }
 
-ul li 
-{
-    list-style: none;
-    color: #484848;
-    font-size: 20px;
-    letter-spacing: 15px;
-    animation: lighting 1.4s linear infinite;
+ul li:nth-child(1) {
+    animation-delay: 0
 }
 
-@keyframes lighting 
-{
-	0% {
-		color: #fff;
-		text-shadow: none;
-	}
-
-	90% {
-		color: #fff;
-		text-shadow: none;
-	}
-
-	100% {
-		color: #4646df;
-		text-shadow: 0 0 7px #fff, 0 0 50px #e5e7e9;
-	}
+ul li:nth-child(2) {
+    animation-delay: 0.1s
 }
 
-ul li:nth-child(1) 
-{
-	animation-delay: 0
+ul li:nth-child(3) {
+    animation-delay: 0.2s
 }
 
-ul li:nth-child(2) 
-{
-	animation-delay: 0.1s
+ul li:nth-child(4) {
+    animation-delay: 0.3s
 }
 
-ul li:nth-child(3) 
-{
-	animation-delay: 0.2s
+ul li:nth-child(5) {
+    animation-delay: 0.4s
 }
 
-ul li:nth-child(4) 
-{
-	animation-delay: 0.3s
+ul li:nth-child(6) {
+    animation-delay: 0.5s
 }
 
-ul li:nth-child(5) 
-{
-	animation-delay: 0.4s
+ul li:nth-child(7) {
+    animation-delay: 0.6s
 }
 
-ul li:nth-child(6) 
-{
-	animation-delay: 0.5s
+ul li:nth-child(8) {
+    animation-delay: 0.7s
 }
-
-ul li:nth-child(7) 
-{
-	animation-delay: 0.6s
-}
-
-ul li:nth-child(8) 
-{
-	animation-delay: 0.7s
-}
-
-
