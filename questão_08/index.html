@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8 - Requisição AJAX</title>
+</head>
+<body>
+
+    <h2>Exercício 8: Requisição AJAX com callback</h2>
+    <button id="loadData">Carregar dados</button>
+    <pre id="dataResult"></pre>
+
+    <script>
+        document.getElementById("loadData").addEventListener("click", () => {
+            fetch("https://microsoftedge.github.io/Demos/json-dummy-data/64KB.json")
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("dataResult").textContent = JSON.stringify(data, null, 2);
+                })
+                .catch(error => console.error("Erro na requisição:", error));
+        });
+    </script>
+
+</body>
+</html>

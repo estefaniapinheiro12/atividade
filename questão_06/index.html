@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6 - Mouse sobre o elemento</title>
+    <style>
+        #hoverBox {
+            width: 200px;
+            height: 100px;
+            background-color: lightgray;
+            text-align: center;
+            line-height: 100px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Exercício 6: Mouse sobre o elemento</h2>
+    <div id="hoverBox">Passe o mouse aqui</div>
+
+    <script>
+        const div = document.getElementById("hoverBox");
+
+        div.addEventListener("mouseover", () => {
+            div.style.backgroundColor = "yellow";
+        });
+
+        div.addEventListener("mouseout", () => {
+            div.style.backgroundColor = "lightgray";
+        });
+    </script>
+
+</body>
+</html>
